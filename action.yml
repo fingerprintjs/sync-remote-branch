@@ -4,6 +4,7 @@ branding:
   icon: 'git-merge'
   color: 'green'
 author: 'sergey.shelomentsev@fingerprintjs.com'
+
 inputs:
   source:
     description: 'Source repository'
@@ -12,6 +13,7 @@ inputs:
     description: 'Branch to update'
     required: false
     default: main
+    
 runs:
   using: 'docker'
   image: 'Dockerfile'
