@@ -1,6 +1,9 @@
-name: 'Update main branch of the repository from the another one'
+name: 'Synchronize changes from the specified repository to the current one'
 description: 'Commits changes of the specified repository to the current one'
-author: 'sergey.v.shelomentsev@gmail.com'
+branding:
+  icon: 'git-merge'
+  color: 'green'
+author: 'sergey.shelomentsev@fingerprintjs.com'
 inputs:
   source:
     description: 'Source repository'
