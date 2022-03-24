@@ -10,7 +10,7 @@ The repository must be publicly available.
 
 #### `branch` (Optional)
 The name of the branch to update.
-Default value is `main`.
+The default value is `main`.
 
 ## Example usage
 ```
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Update main branch of the repository from the another one
-        uses: fingerprintjs/github-action-sync-repository@v0.0.1
+        uses: fingerprintjs/repository@v0.0.1
         with:
           source: https://github.com/fingerprintjs/cf-worker.git          
 ```
