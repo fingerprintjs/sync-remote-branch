@@ -14,8 +14,8 @@ on:
 
 jobs:
   release:
-    name: Release action
-    runs-on: ubuntu-latest
+    name: Release new version
+    runs-on: ubuntu-latest  
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -29,6 +29,7 @@ jobs:
         with:
           default_bump: ${{ github.event.inputs.version_bump }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
