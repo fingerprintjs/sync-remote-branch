@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Update main branch of the repository from the another one
-        uses: sshelomentsev/github-action-update-repository@v0.1.1
+        uses: fingerprintjs/github-action-sync-repository@v0.0.1
         with:
-          source: https://github.com/sshelomentsev/r1.git          
+          source: https://github.com/fingerprintjs/cf-worker.git          
 ```
