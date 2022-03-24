@@ -1,0 +1,14 @@
+name: 'Update main branch of the repository from the another one'
+description: 'Commits changes of the specified repository to the current one'
+author: 'sergey.v.shelomentsev@gmail.com'
+inputs:
+  source:
+    description: 'Source repository'
+    required: true
+  branch:
+    description: 'Branch to update'
+    required: false
+    default: main
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
