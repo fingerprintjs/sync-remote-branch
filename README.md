@@ -1,5 +1,7 @@
 # Github Actions: sync repository
 
+![Build status](https://github.com/fingerprintjs/sync-repository/actions/workflows/build.yml/badge.svg)
+
 ## Action
 * Synchronize changes from the specified repository to the current one
 
