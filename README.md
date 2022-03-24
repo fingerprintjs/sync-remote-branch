@@ -5,7 +5,7 @@
 
 ## Inputs
 #### `source` (Required)
-The URL (https only, SSH isn't supported there) to a repository to update from.
+The URL (HTTPS protocol only; SSH isn't supported) to the repository from which updates will be applied.
 The repository must be publicly available.
 
 #### `branch` (Optional)
@@ -13,15 +13,24 @@ The name of the branch to update.
 The default value is `main`.
 
 ## Example usage
-```
+```yaml
+name: Update worker's repository from the public template
+
+on:
+  # Add cron expression if you need to update automatically periodically
+  schedule:
+  - cron: "0 0 * * *"
+  # Used for a manual run from Github Actions
+  workflow_dispatch:
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  update:
     steps:
       - uses: actions/checkout@v2
-
-      - name: Update main branch of the repository from the another one
-        uses: fingerprintjs/repository@v0.0.1
+      
+      - name: Get updates from the public template and merge into the repository branch
+        uses: fingerprintjs/sync-repository@v1.0.0
         with:
-          source: https://github.com/fingerprintjs/cf-worker.git          
+          source: https://github.com/fingerprintjs/cf-worker.git
+          branch: master
 ```
