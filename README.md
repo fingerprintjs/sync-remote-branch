@@ -31,8 +31,8 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Get updates from the public template and merge into the repository branch
-        uses: fingerprintjs/sync-repository@v1.0.0
+        uses: fingerprintjs/sync-remote-branch@v1.0.0
         with:
-          source: https://github.com/fingerprintjs/cf-worker.git
+          source: https://github.com/fingerprintjs/fingerprintjs-pro-cloudflare-worker.git
           branch: master
 ```
